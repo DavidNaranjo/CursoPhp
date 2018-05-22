@@ -4,6 +4,6 @@
 		<title>My First PHP Web Page</title>
 	</head>
 	<body>
-		<?php print('Hello friends!'); ?>
+		<?php echo('Hello World of PHP!'); ?>
 	</body>
 </html>

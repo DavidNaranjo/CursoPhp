@@ -52,7 +52,7 @@
 
 			<hr>
 
-			<small>&copy;<!-- THIS YEAR --> - <!-- YOUR NAME --></small>
+			<small>&copy;<?php echo $this_year; ?> - <?php $my_name; ?></small>
 		</div><!-- end wrapper -->
 
 		<div class="copyright-info">

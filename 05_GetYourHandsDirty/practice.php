@@ -5,15 +5,26 @@
 
 	// Your Variables
 	$my_name = "David";
-  $fav_color = "Black"
-  $birth_year = 1995;
+	$fav_colour = "Green";
+	$birth_year = 1995;
 
-  date_default_timezone_set('Europe/London');
+	/*
+		When using the date() method, PHP has to know the timezone where the server resides,
+		in order to output the correct hour and date for that geographical location.
+		The date_default_timezone_set() method takes a string that locates the server.
+		The list of supported timezones can be found at http://php.net/manual/en/timezones.php
+	*/
+	date_default_timezone_set('Europe/London');
 
-  $today = date('F j, Y');
-  $this_year = date('Y');
+	$today = date('F j, Y');
+	$this_year = date('Y');
 
-  $myage = ($this_year - $birth_year);
+	/*
+	Use PHP to calculate the difference
+	between your birth year and this year
+	to show your age dynamically
+	*/
+	$my_age		= ($this_year - $birth_year);
 
 ?>
 
@@ -32,7 +43,8 @@
 			<h1>Get Your Hands Dirty: <small><?php echo TITLE; ?></small></h1>
 			<hr>
 
-			<h2>Your Example</h2>
+			<h2>Final Example</h2>
+			<p>Make sure to view the source code in your editor!</p>
 
 			<div class="sandbox">
 				<h3>Today's Date:</h3>
@@ -42,17 +54,22 @@
 				<p><?php echo $my_name; ?></p>
 
 				<h3>My Favourite Colour:</h3>
-				<p><?php echo $fav_color; ?></p>
+				<p><?php echo $fav_colour; ?></p>
 
 				<h3>My Age:</h3>
-				<p><?php echo $myage; ?></p>
+				<p><?php echo $my_age; ?></p>
 			</div><!-- end sandbox -->
 
-			<a href="index.php" class="button">Back to the final example</a>
+			<a href="practice.php" class="button">Check out your example</a>
+
+			<div class="navs cf">
+				<a href="/04_DefiningConstants" class="button prev">Previous Lecture</a>
+				<a href="/06_Arrays" class="button next">Next Lecture</a>
+			</div><!-- end navs -->
 
 			<hr>
 
-			<small>&copy;<?php echo $this_year; ?> - <?php $my_name; ?></small>
+			<small>&copy;<?php echo $this_year; ?> <a href="http://bradhussey.ca/"><?php echo $my_name; ?></a></small>
 		</div><!-- end wrapper -->
 
 		<div class="copyright-info">
